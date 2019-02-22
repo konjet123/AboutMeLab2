@@ -26,16 +26,56 @@ var meetExpectations=['Welcome to Java World, You are required to take object or
 		      'Please visit online benefits page and apply for corporate phone'
 ];
 var answer;
-
 for (var counter = 0; counter < questions.length; counter++) {
    
     answer = prompt(questions[counter]);
     if (answer.toUpperCase() === 'Y' || answer.toUpperCase() === 'YES' ) {
         console.log(aboveExpectations[counter]);
-        alert(aboveExpectations[counter]);
+        alert(aboveExpectations[counter]);        
     } else {
         console.log(meetExpectations[counter]);
         alert(meetExpectations[counter]);
     }
 }
 
+
+var number;
+for (var counter = 0; counter < 4; counter++) {
+    number = parseInt(prompt('What is my favorite number (1 to 10)?'));
+    if (number < 10) {
+        alert('sorry you guessed too low');
+        console.log('sorry you guessed too low');
+        
+    } else if (number > 10) {
+        alert('you guessed too high');
+        console.log('you guessed too high');
+        
+    } else if (isNaN(number) || number === null) {
+        alert('please enter an actual number');
+        console.log('please enter an actual number');
+        
+    } else if (number===6) {
+        alert('You entered correct number');
+        console.log('You entered correct number');
+        break;
+    }
+}
+
+var validLocation=['Bothell','Edmond','Seattle','Orlando','Miami']
+var correctAnswerCounter=0;
+for (var counter = 0; counter < 6; counter++) {
+    answer = prompt('Guess my location?');
+    if (answer.toUpperCase() === 'Orlando') {
+        console.log('You got the correct answer');
+        alert('You got the correct answer');
+        break;
+    } else {
+        console.log('Wrong answer, try again');
+        alert('Wrong answer, try again');
+    }
+}
+
+if (correctAnswerCounter > 0) {
+    console.log('You got ',correctAnswerCounter, ' out of ', questions.length()+1);
+    alert('You got ',correctAnswerCounter, ' out of ', questions.length()+1);
+}
