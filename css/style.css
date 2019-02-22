@@ -1,0 +1,47 @@
+htm {
+    height: 100%;
+}
+body {
+    background: #999;
+}
+
+a { 
+    color: rgb(92, 92, 219);
+}
+header {
+    background:     rgb(85, 52, 204);
+    color: #fff;
+    Padding: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+
+}
+nav {
+    background: #444;
+}
+
+nav ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 20px;
+    fint-size: 24px;
+   
+}
+
+section {
+    width:90%;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 800px;
+}
+footer {
+    background: lightcoral;
+    padding:10px;
+    text-align:center;
+    color: #000;
+}
