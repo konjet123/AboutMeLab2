@@ -42,7 +42,11 @@ for (var counter = 0; counter < questions.length; counter++) {
 var number;
 for (var counter = 0; counter < 4; counter++) {
     number = parseInt(prompt('What is my favorite number (1 to 10)?'));
-    if (number < 10) {
+    if (number===6) {
+        alert('You entered correct number');
+        console.log('You entered correct number');
+        break;
+    } else if (number < 10) {
         alert('sorry you guessed too low');
         console.log('sorry you guessed too low');
         
@@ -54,28 +58,34 @@ for (var counter = 0; counter < 4; counter++) {
         alert('please enter an actual number');
         console.log('please enter an actual number');
         
-    } else if (number===6) {
-        alert('You entered correct number');
-        console.log('You entered correct number');
-        break;
-    }
+    } 
 }
+
 
 var validLocation=['Bothell','Edmond','Seattle','Orlando','Miami']
 var correctAnswerCounter=0;
+var flagGetOut='N';
 for (var counter = 0; counter < 6; counter++) {
     answer = prompt('Guess my location?');
-    if (answer.toUpperCase() === 'Orlando') {
-        console.log('You got the correct answer');
-        alert('You got the correct answer');
+    
+    for(var arrayCounter=0;arrayCounter<5;arrayCounter++) {
+        if (answer.toUpperCase() === validLocation[arrayCounter]) {
+            console.log('You got the correct answer');                        
+            flagGetOut='Y'
+            break;
+        } 
+    }
+    if (flagGetOut === 'Y') {
+        correctAnswerCounter++;
         break;
     } else {
-        console.log('Wrong answer, try again');
-        alert('Wrong answer, try again');
+        console.log('Wrong answer, try again');  
+        correctAnswerCounter++;
     }
+   
 }
 
 if (correctAnswerCounter > 0) {
-    console.log('You got ',correctAnswerCounter, ' out of ', questions.length()+1);
-    alert('You got ',correctAnswerCounter, ' out of ', questions.length()+1);
+    console.log('You got ',correctAnswerCounter, ' out of 6');
+    alert('You got ',correctAnswerCounter, ' out of 6');
 }
