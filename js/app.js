@@ -82,10 +82,11 @@ for (var counter = 0; counter < 6; counter++) {
         console.log('Wrong answer, try again');  
         correctAnswerCounter++;
     }
-   
+    counter();
 }
-
+function counter() {
 if (correctAnswerCounter > 0) {
     console.log('You got ',correctAnswerCounter, ' out of 6');
     alert('You got ',correctAnswerCounter, ' out of 6');
+}
 }
